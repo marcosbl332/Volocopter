@@ -1,0 +1,363 @@
+/* Define um conjunto de estilos padrão para todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spectral SC', 'Poppins', sans-serif;
+}
+
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  
+  .header {
+    background: #2B5059;
+    padding-inline: 16px;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 250px;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  
+  .nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding:  5px 10px;
+    border-radius: 4px;
+  }
+  
+  .nav-list a:hover {
+    background-color: #d2e6eb;
+    color: black;
+}
+
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2B5059;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.7s;
+    }
+  
+   .nav-list li:nth-child(4) a {
+    transition: 0.5s 0.9s;
+   }
+
+   .nav-list li:nth-child(5) a {
+    transition: 0.5s 0.11s;
+   }
+
+   .nav-list li:nth-child(6) a {
+    transition: 0.5s 0.14s;
+   }
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+/* Estiliza a seção do banner principal */
+.banner {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.308)), url('imagewns/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estiliza o título e subtitulo no banner */
+.texto .titulo {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.texto .sub_titulo {
+    color: #fff;
+    font-size: 58px;
+    font-weight: 600;
+}
+
+/* Estiliza os botões no banner */
+.texto .botoes {
+    margin-top: 30px;
+}
+
+.texto .botoes button {
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Estiliza o primeiro botão no banner */
+.texto .botoes button.n-overlay {
+    color: white;
+    background: none;
+    border: 2px solid white;
+}
+
+.texto .botoes button.n-overlay:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Estiliza o segundo botão no banner com uma animação */
+.texto .botoes button.overlay {
+    background: white;
+    color: black;
+    animation: vibrar 0.5s ease-in-out infinite both;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #2B5059;
+    color: #fff;
+    padding: 20px 0;
+}
+
+ .email {
+    padding-left: 40px;
+  }
+   .novidades {
+    padding: 0px;
+    padding-left: 10px
+  } 
+  
+   .campo-email {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    color: #c7cecf;
+    border: 1px solid #ffff;
+    border-radius: 20px;
+    padding: 15px;
+    padding-right: 1px;
+    height: 15px;
+    width: 300px;
+    font-size: 17px; 
+  }
+  
+  .campo-email:hover {
+  box-shadow: 0px 0px 10px 1px #000000;
+  }
+  
+  .botao {
+  background-color: #d2e6eb;
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 5px 10px;
+  align-self: center;
+  font-size: 14px;
+  }
+  
+  .botao:hover{
+    border-color: #809da5;
+  }
+
+
+/* Estiliza as listas de links no rodapé */
+.listas {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.listas ul {
+    list-style: none;
+}
+
+.listas ul li {
+    margin: 5px 0;
+}
+
+/* Estiliza os links no rodapé */
+.listas ul li a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid #2B5059;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+/* Estiliza os links no rodapé quando passam o mouse sobre eles */
+.listas ul li a:hover {
+    border-color: #d2e6eb;
+}
+
+/* Estiliza os títulos das listas no rodapé */
+.listas ul strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Estiliza a seção de produtos e a grade de produtos */
+.titulo-produto {
+    font-size: 20px;
+    padding-top: 20px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estiliza os blocos de produtos individuais */
+.produto {
+    background-color: #3d6e79;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+}
+
+.produto h3 {
+    font-size: 20px;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.produto p {
+    font-size: 15px;
+}
+
+@media (min-width: 768px) {
+
+    /* Para telas maiores (768px ou mais), ajusta o layout dos produtos para 3 colunas */
+    .produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Define uma animação chamada "vibrar" */
+@keyframes vibrar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

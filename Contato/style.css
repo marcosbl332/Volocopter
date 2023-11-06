@@ -1,0 +1,368 @@
+/* Inicio do Cabeçalho */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul p {
+    margin: 0px;
+    padding: 0px;
+    font-size: clamp(1.75em, 1em + 3vw, 2.5em);
+  }
+  
+  a {
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  
+  .header {
+    background: #2B5059;
+    padding-inline: 16px;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 250px;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  
+  .nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding:  5px 10px;
+    border-radius: 4px;
+  }
+  
+  .nav-list a:hover {
+    background-color: #d2e6eb;
+    color: black;
+}
+
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2B5059;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.7s;
+    }
+  
+   .nav-list li:nth-child(4) a {
+    transition: 0.5s 0.9s;
+   }
+
+   .nav-list li:nth-child(5) a {
+    transition: 0.5s 0.11s;
+   }
+
+   .nav-list li:nth-child(6) a {
+    transition: 0.5s 0.14s;
+   }
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+  /* Fim do Cabeçalho */
+
+  main {
+    text-align: center;
+    }
+    
+    
+    h1 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #142d33;
+      color: #ffffff;
+    }
+    
+    .paragrafo-contato{
+      line-height: 1,5px;
+      margin-left: 230px;
+      margin-right: 230px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      font-size: 20px;
+    }
+    
+    h2 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: #142d33;
+      color: #ffffff;
+    }
+    
+    .blocos {
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+      margin: 90px;
+      color: #ffff;
+    }
+    
+    
+    .contato {
+      background-color: #2B5059;
+      padding: 20px;
+      height: 355px;
+      width: 270px;
+      font-size: 19px;
+      line-height: 60px;
+    }
+    
+    .contato-email{
+      text-align: center;
+    }
+    
+    .tel {
+      text-align: center;
+    }
+    
+    .fax {
+      text-align: center;
+    }
+    
+    .camposform {
+      display: flex;
+      flex-direction: column;
+      background-color: #2B5059;
+      width: 270px;
+      padding: 20px;
+      height:355px ;
+      margin-bottom: 10px;
+    }
+
+    .enviar {
+      background: #c7cecf;
+      color: #2B5059;
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+    .nossa-localização{
+      font-size: 20px;
+    }
+    
+    .localização {
+      background-color: #2B5059;
+      padding: 20px;
+      height: 355px;
+      width: 270px;
+    }
+    
+    .mapa{
+      height: 270px;
+      width: 260px;
+    }
+
+    @media (max-width: 600px) {
+      .paragrafo-contato {
+        line-height: 1,5x;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        font-size: 20px;
+      }
+      .blocos {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+
+    footer {
+      background-color: #2B5059;
+      color: #fff;
+      padding: 20px 0;
+  }
+  
+   .email {
+      padding-left: 40px;
+    }
+     .novidades {
+      padding: 0px;
+      padding-left: 10px
+    } 
+    
+     .campo-email {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #ffffff;
+      color: #c7cecf;
+      border: 1px solid #ffff;
+      border-radius: 20px;
+      padding: 15px;
+      padding-right: 1px;
+      height: 15px;
+      width: 300px;
+      font-size: 17px; 
+    }
+    
+    .campo-email:hover {
+    box-shadow: 0px 0px 10px 1px #000000;
+    }
+    
+    .botao {
+    background-color: #d2e6eb;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    align-self: center;
+    font-size: 14px;
+    }
+    
+    .botao:hover{
+      border-color: #809da5;
+    }
+  
+  
+  /* Estiliza as listas de links no rodapé */
+  .listas {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+  }
+  
+  .listas ul {
+      list-style: none;
+  }
+  
+  .listas ul li {
+      margin: 5px 0;
+  }
+  
+  /* Estiliza os links no rodapé */
+  .listas ul li a {
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 2px solid #2B5059;
+      font-size: 16px;
+      font-weight: 400;
+      transition: 0.3s;
+  }
+  
+  /* Estiliza os links no rodapé quando passam o mouse sobre eles */
+  .listas ul li a:hover {
+      border-color: #d2e6eb;
+  }
+  
+  /* Estiliza os títulos das listas no rodapé */
+  .listas ul strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+  }
+
+      .mainObg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #142d33;
+        flex-direction: column;
+      }
+      .textObrigado {
+        font-size: 45px;
+        color: #ffffff;
+      }
+      .paragrafoObrigado {
+        color: #ffffff;
+        font-size: 25px;
+        margin-bottom: 50px;
+      }
+      .button{
+        padding: 15px 55px;
+        background: #c7cecf;
+        color: #2B5059;
+      }
