@@ -83,7 +83,7 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #2B5059;
+    /* background: #2B5059; */
     clip-path: circle(100px at 90% -15%);
     transition: 1s ease-out;
 
@@ -211,7 +211,7 @@ h1 {
   }
 
   .blocos {
-    background-color: red;
+    background-color: #fff;
     display: flex;
     flex-wrap: wrap;
   }
